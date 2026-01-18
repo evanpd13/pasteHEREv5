@@ -17,6 +17,7 @@ os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
 import sys
 import tempfile
 import math
+import platform
 
 # Check if running in correct environment
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -132,16 +133,35 @@ def get_rembg_session():
         REMBG_AVAILABLE = False
         return None
 
-# Determine device
-if torch.backends.mps.is_available():
-    DEVICE = "mps"
-    DTYPE = torch.float32
-elif torch.cuda.is_available():
-    DEVICE = "cuda"
-    DTYPE = torch.float16
-else:
-    DEVICE = "cpu"
-    DTYPE = torch.float32
+def resolve_device():
+    """Resolve device with Mac-safe defaults and override support."""
+    requested = os.getenv("ZERO123_DEVICE", "").strip().lower()
+    if requested:
+        if requested == "mps" and torch.backends.mps.is_available():
+            return "mps", torch.float32
+        if requested == "cuda" and torch.cuda.is_available():
+            return "cuda", torch.float16
+        if requested == "cpu":
+            return "cpu", torch.float32
+        logger.warning(
+            "Requested ZERO123_DEVICE=%s is unavailable. Falling back to safe defaults.",
+            requested,
+        )
+
+    if platform.system() == "Darwin" and torch.backends.mps.is_available():
+        logger.warning(
+            "Defaulting to CPU on macOS for stability. Set ZERO123_DEVICE=mps to enable MPS."
+        )
+        return "cpu", torch.float32
+
+    if torch.backends.mps.is_available():
+        return "mps", torch.float32
+    if torch.cuda.is_available():
+        return "cuda", torch.float16
+    return "cpu", torch.float32
+
+
+DEVICE, DTYPE = resolve_device()
 
 logger.info(f"Device configured: {DEVICE}, dtype: {DTYPE}")
 
@@ -197,14 +217,16 @@ def load_pipeline(model_name: str):
             logger.info("  Loading VAE...")
             vae = AutoencoderKL.from_pretrained(
                 model_id, subfolder="vae", torch_dtype=load_dtype,
-                low_cpu_mem_usage=True
+                low_cpu_mem_usage=True,
+                use_safetensors=False
             )
             logger.debug("  VAE loaded successfully")
 
             logger.info("  Loading image encoder...")
             image_encoder = CLIPVisionModelWithProjection.from_pretrained(
                 model_id, subfolder="image_encoder", torch_dtype=load_dtype,
-                low_cpu_mem_usage=True
+                low_cpu_mem_usage=True,
+                use_safetensors=False
             )
             logger.debug("  Image encoder loaded successfully")
 
@@ -217,7 +239,8 @@ def load_pipeline(model_name: str):
             logger.info("  Loading UNet...")
             unet = UNet2DConditionModel.from_pretrained(
                 model_id, subfolder="unet", torch_dtype=load_dtype,
-                low_cpu_mem_usage=True
+                low_cpu_mem_usage=True,
+                use_safetensors=False
             )
             logger.debug("  UNet loaded successfully")
 
@@ -226,7 +249,11 @@ def load_pipeline(model_name: str):
             logger.debug("  Scheduler loaded successfully")
 
             logger.info("  Loading CC projection...")
-            cc_projection = CCProjection.from_pretrained(model_id, subfolder="cc_projection")
+            cc_projection = CCProjection.from_pretrained(
+                model_id,
+                subfolder="cc_projection",
+                use_safetensors=False
+            )
             logger.debug("  CC projection loaded successfully")
 
             logger.info("  Assembling pipeline...")
