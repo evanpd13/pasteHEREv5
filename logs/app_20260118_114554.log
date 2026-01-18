@@ -1,0 +1,134 @@
+2026-01-18 11:45:54,877 | INFO | <module>:106 | Logging initialized. Log file: /Users/evan/Downloads/newPROJECTv3/logs/app_20260118_114554.log
+2026-01-18 11:45:54,885 | INFO | <module>:146 | Device configured: mps, dtype: torch.float32
+2026-01-18 11:45:54,885 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,886 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,886 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,886 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,887 | DEBUG | _new_conn:1049 | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-18 11:45:54,901 | DEBUG | trace:47 | connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2026-01-18 11:45:54,932 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,932 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,958 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,958 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:54,987 | DEBUG | __init__:64 | Using selector: KqueueSelector
+2026-01-18 11:45:55,025 | DEBUG | trace:47 | connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=None socket_options=None
+2026-01-18 11:45:55,025 | DEBUG | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10beb1940>
+2026-01-18 11:45:55,025 | DEBUG | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-18 11:45:55,025 | DEBUG | trace:47 | send_request_headers.complete
+2026-01-18 11:45:55,025 | DEBUG | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-18 11:45:55,026 | DEBUG | trace:47 | send_request_body.complete
+2026-01-18 11:45:55,026 | DEBUG | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-18 11:45:55,026 | DEBUG | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Sun, 18 Jan 2026 17:45:54 GMT'), (b'server', b'uvicorn'), (b'content-length', b'4'), (b'content-type', b'application/json')])
+2026-01-18 11:45:55,026 | INFO | _send_single_request:1025 | HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | receive_response_body.complete
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | response_closed.started
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | response_closed.complete
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | close.started
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | close.complete
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=3 socket_options=None
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10bebed50>
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | send_request_headers.started request=<Request [b'HEAD']>
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | send_request_headers.complete
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | send_request_body.started request=<Request [b'HEAD']>
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | send_request_body.complete
+2026-01-18 11:45:55,027 | DEBUG | trace:47 | receive_response_headers.started request=<Request [b'HEAD']>
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Sun, 18 Jan 2026 17:45:54 GMT'), (b'server', b'uvicorn'), (b'content-length', b'122029'), (b'content-type', b'text/html; charset=utf-8')])
+2026-01-18 11:45:55,035 | INFO | _send_single_request:1025 | HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | receive_response_body.started request=<Request [b'HEAD']>
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | receive_response_body.complete
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | response_closed.started
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | response_closed.complete
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | close.started
+2026-01-18 11:45:55,035 | DEBUG | trace:47 | close.complete
+2026-01-18 11:45:55,037 | DEBUG | _new_conn:1049 | Starting new HTTPS connection (1): huggingface.co:443
+2026-01-18 11:45:55,279 | DEBUG | trace:47 | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10bf11450>
+2026-01-18 11:45:55,280 | DEBUG | trace:47 | start_tls.started ssl_context=<ssl.SSLContext object at 0x10ae51a30> server_hostname='api.gradio.app' timeout=3
+2026-01-18 11:45:55,305 | DEBUG | _make_request:544 | https://huggingface.co:443 "HEAD /api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics HTTP/1.1" 200 0
+2026-01-18 11:45:55,325 | DEBUG | _make_request:544 | https://huggingface.co:443 "HEAD /api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry HTTP/1.1" 200 0
+2026-01-18 11:45:55,561 | DEBUG | trace:47 | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10be56ea0>
+2026-01-18 11:45:55,561 | DEBUG | trace:47 | send_request_headers.started request=<Request [b'GET']>
+2026-01-18 11:45:55,562 | DEBUG | trace:47 | send_request_headers.complete
+2026-01-18 11:45:55,562 | DEBUG | trace:47 | send_request_body.started request=<Request [b'GET']>
+2026-01-18 11:45:55,563 | DEBUG | trace:47 | send_request_body.complete
+2026-01-18 11:45:55,563 | DEBUG | trace:47 | receive_response_headers.started request=<Request [b'GET']>
+2026-01-18 11:45:55,646 | DEBUG | trace:47 | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 18 Jan 2026 17:45:55 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2026-01-18 11:45:55,647 | INFO | _send_single_request:1025 | HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-01-18 11:45:55,648 | DEBUG | trace:47 | receive_response_body.started request=<Request [b'GET']>
+2026-01-18 11:45:55,648 | DEBUG | trace:47 | receive_response_body.complete
+2026-01-18 11:45:55,648 | DEBUG | trace:47 | response_closed.started
+2026-01-18 11:45:55,648 | DEBUG | trace:47 | response_closed.complete
+2026-01-18 11:45:55,649 | DEBUG | trace:47 | close.started
+2026-01-18 11:45:55,650 | DEBUG | trace:47 | close.complete
+2026-01-18 11:46:24,231 | DEBUG | callback:627 | Calling on_part_begin with no data
+2026-01-18 11:46:24,231 | DEBUG | callback:624 | Calling on_header_field with data[42:61]
+2026-01-18 11:46:24,231 | DEBUG | callback:624 | Calling on_header_value with data[63:117]
+2026-01-18 11:46:24,231 | DEBUG | callback:627 | Calling on_header_end with no data
+2026-01-18 11:46:24,231 | DEBUG | callback:624 | Calling on_header_field with data[119:131]
+2026-01-18 11:46:24,231 | DEBUG | callback:624 | Calling on_header_value with data[133:142]
+2026-01-18 11:46:24,231 | DEBUG | callback:627 | Calling on_header_end with no data
+2026-01-18 11:46:24,231 | DEBUG | callback:627 | Calling on_headers_finished with no data
+2026-01-18 11:46:24,232 | DEBUG | callback:624 | Calling on_part_data with data[146:147456]
+2026-01-18 11:46:24,235 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,237 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,238 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,239 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,240 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,241 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,242 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,243 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,244 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,245 | DEBUG | callback:624 | Calling on_part_data with data[0:262144]
+2026-01-18 11:46:24,246 | DEBUG | callback:624 | Calling on_part_data with data[0:223163]
+2026-01-18 11:46:24,246 | DEBUG | callback:627 | Calling on_part_end with no data
+2026-01-18 11:46:24,247 | DEBUG | callback:627 | Calling on_end with no data
+2026-01-18 11:46:29,190 | DEBUG | wrapper:342 | matplotlib data path: /opt/anaconda3/lib/python3.13/site-packages/matplotlib/mpl-data
+2026-01-18 11:46:29,196 | DEBUG | wrapper:342 | CONFIGDIR=/Users/evan/.matplotlib
+2026-01-18 11:46:29,196 | DEBUG | <module>:1557 | interactive is False
+2026-01-18 11:46:29,196 | DEBUG | <module>:1558 | platform is darwin
+2026-01-18 11:46:29,226 | DEBUG | wrapper:342 | CACHEDIR=/Users/evan/.matplotlib
+2026-01-18 11:46:29,227 | DEBUG | _load_fontmanager:1635 | Using fontManager instance from /Users/evan/.matplotlib/fontlist-v390.json
+2026-01-18 11:46:29,325 | DEBUG | switch_backend:497 | Loaded backend macosx version unknown.
+2026-01-18 11:46:29,325 | DEBUG | switch_backend:497 | Loaded backend agg version v2.2.
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'IHDR' 16 13
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'iCCP' 41 4764
+2026-01-18 11:46:29,326 | DEBUG | chunk_iCCP:434 | iCCP profile name b'kCGColorSpaceDisplayP3_PQ'
+2026-01-18 11:46:29,326 | DEBUG | chunk_iCCP:436 | Compression method 0
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'cICP' 4817 4
+2026-01-18 11:46:29,326 | DEBUG | _open:787 | b'cICP' 4817 4 (unknown)
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'eXIf' 4833 2844
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'pHYs' 7689 9
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'iTXt' 7710 8494
+2026-01-18 11:46:29,326 | DEBUG | call:204 | STREAM b'IDAT' 16216 16384
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 146 - value: b'Apple\x00'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: Model (272) - type: string (2) Tag Location: 34 - Data Location: 152 - value: b'iPhone 15 Pro\x00'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: XResolution (282) - type: rational (5) Tag Location: 58 - Data Location: 166 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: YResolution (283) - type: rational (5) Tag Location: 70 - Data Location: 174 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: Software (305) - type: string (2) Tag Location: 94 - Data Location: 182 - value: b'17.5.1\x00'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 190 - value: b'2024:07:11 13:00:58\x00'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: HostComputer (316) - type: string (2) Tag Location: 118 - Data Location: 210 - value: b'iPhone 15 Pro\x00'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xe0'
+2026-01-18 11:46:29,326 | DEBUG | load:941 | tag: GPSInfoIFD (34853) - type: long (4) - value: b'\x00\x00\t\xe6'
+2026-01-18 11:46:29,358 | INFO | generate_rotation_set:766 | generate_rotation_set called: model=Stable Zero123, angle=30.0, steps=75, frames=3
+2026-01-18 11:46:29,358 | INFO | generate_rotation_set:785 | Using model: Stable Zero123
+2026-01-18 11:46:29,358 | INFO | generate_rotation_set:786 | Preprocessing image (input res: 512px)...
+2026-01-18 11:46:29,358 | INFO | preprocess_image:566 | preprocess_image called: size=256, input_res=512, rotation=0.0, auto_balance=True
+2026-01-18 11:46:29,358 | DEBUG | preprocess_image:583 | Input image: mode=RGB, size=(1116, 1611)
+2026-01-18 11:46:29,358 | DEBUG | preprocess_image:599 | Downscaling from 1116x1611 to 354x512
+2026-01-18 11:46:29,365 | INFO | preprocess_image:603 |   Removing background...
+2026-01-18 11:46:29,366 | DEBUG | remove_background_enhanced:298 | remove_background_enhanced called, image mode=RGB, size=(354, 512)
+2026-01-18 11:46:29,366 | INFO | get_rembg_session:119 | Initializing rembg session...
+2026-01-18 11:46:30,415 | INFO | get_rembg_session:128 | rembg initialized successfully with CPU provider
+2026-01-18 11:46:30,416 | INFO | remove_background_enhanced:312 |   Using rembg for background removal...
+2026-01-18 11:46:33,675 | INFO | remove_background_enhanced:320 |   Background removal successful, output mode=RGBA, size=(354, 512)
+2026-01-18 11:46:33,676 | DEBUG | preprocess_image:616 | Mask refined and applied
+2026-01-18 11:46:33,677 | DEBUG | preprocess_image:623 | Balance analysis: {'balanced': np.True_, 'correction_angle': -0.5466497778067221, 'density_shift': np.float64(0.08332660243466217), 'center_of_mass': (np.float64(184.26124733167944), np.float64(251.47039750764438)), 'geometric_center': (np.float64(182.0), np.float64(268.0)), 'bounds': (np.int64(25), np.int64(31), np.int64(339), np.int64(505))}
+2026-01-18 11:46:33,679 | INFO | load_pipeline:171 | load_pipeline called with model_name=Stable Zero123
+2026-01-18 11:46:33,679 | INFO | load_pipeline:186 | Loading Stable Zero123 pipeline (id=kxic/stable-zero123, type=zero123)...
+2026-01-18 11:46:37,116 | DEBUG | <module>:34 | Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-01-18 11:46:37,264 | DEBUG | <module>:47 | Creating converter from 7 to 5
+2026-01-18 11:46:37,264 | DEBUG | <module>:47 | Creating converter from 5 to 7
+2026-01-18 11:46:37,264 | DEBUG | <module>:47 | Creating converter from 7 to 5
+2026-01-18 11:46:37,264 | DEBUG | <module>:47 | Creating converter from 5 to 7

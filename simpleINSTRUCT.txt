@@ -1,0 +1,12 @@
+You will take an input PNG or JPG photo and use the latest technology to perform a ±30 degree rotation, similar to Zero-1-to-3 models. Manipulate the source image by identifying the subject area, removing the background, and then passing it to a Zero-1-to-3 type model for rotation. Generate 3 total images: the first with a +30 degree rotation, the second as the original (background removed), and the third with a -30 degree rotation.
+
+Aim for high-quality results using simple code. Do not overcomplicate the objective. Simplicity and functionality are more important than elaborate formatting or unnecessary features. Follow published package documentation wherever possible.
+
+This task should be straightforward. Create a local host UX where the user uploads a photo, adjusts settings, and sees a GIF preview of the 3 generated images. When the user clicks 'export', save the 3 frames to a user-specified directory.
+
+Follow these instructions step by step:
+(1) Plan the project into 3 clear steps.
+(2) Implement the plan by building the code.
+(3) Test the implementation using the examplePhoto.png file in the project directory.
+
+After step 3, the app should be ready to use. Ensure the app is run by a super simple CLI that can be run out of any terminal.
